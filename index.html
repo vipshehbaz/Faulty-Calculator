@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faulty Calculator</title>
+  </head>
+  <body>
+    <input type="number" id="fnum" placeholder="enter first number" />
+    <input type="text" id="operator" placeholder="enter operator" />
+    <input type="number" id="snum" placeholder="enter second number" />
+    <input type="submit" id="btn" />
+    <h1 id="result"></h1>
+    <script>
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        let fnum = document.getElementById("fnum").value;
+        let snum = document.getElementById("snum").value;
+        let result = document.getElementById("result");
+
+        let operator = document.getElementById("operator").value;
+
+        random = Math.floor(Math.random() * 10);
+
+        if (random == 1) {
+          result.innerHTML = eval(fnum + "+" + snum);
+        } else {
+          result.innerHTML = eval(fnum + operator + snum);
+        }
+
+        console.log(random);
+      });
+    </script>
+  </body>
+</html>
